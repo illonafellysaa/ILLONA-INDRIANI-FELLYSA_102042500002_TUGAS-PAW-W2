@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Illona Indriani Fellysa | Personal Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="foto.jpeg">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome untuk logo sosial media -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background foto blur -->
+    <div class="background-photo"></div>
+
+    <main class="page">
+
+        <!-- ================= NAVBAR ================= -->
+        <nav class="navbar">
+
+            <a href="#about">ABOUT ME</a>
+
+            <a href="#profile">PROFILE</a>
+
+            <a href="#socials">SOCIAL MEDIA</a>
+
+        </nav>
+
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="about">
+
+            <!-- Foto profil -->
+            <div class="profile-photo-wrapper">
+
+                <img
+                    src="foto.jpeg"
+                    alt="Foto profil Illona Indriani Fellysa"
+                    class="profile-photo">
+
+            </div>
+
+
+            <!-- Informasi utama -->
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    PERSONAL PORTFOLIO
+                </p>
+
+                <h1>
+                    Hello,<br>
+                    I'm <span>Illona</span>
+                </h1>
+
+               <!-- Tombol -->
+                <a href="#profile" class="main-button">
+
+                    GET TO KNOW ME
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <!-- ================= SOCIAL MEDIA ================= -->
+                <div class="socials" id="socials">
+
+    <!-- GitHub -->
+    <a
+        href="https://github.com/illonafellysaa"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub">
+
+        <i class="fa-brands fa-github"></i>
+
+    </a>
+
+
+    <!-- YouTube -->
+    <a
+        href="https://www.youtube.com/@IllonaFellysaa"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube">
+
+        <i class="fa-brands fa-youtube"></i>
+
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/in/illona-fellysaa-340899377/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+
+        <i class="fa-brands fa-linkedin-in"></i>
+
+    </a>
+        </div>
+    </section>
+
+
+        <!-- ================= PROFILE ================= -->
+        <section class="section profile-section" id="profile">
+
+            <div class="section-heading">
+
+                <h2>
+                    About Me
+                </h2>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+
+                <!-- Deskripsi -->
+                <div class="bio-card">
+
+                    <p>
+                      Halo! Saya <strong>Illona Indriani Fellysa</strong>. 
+                      Saya merupakan mahasiswa Sistem Informasi yang tertarik pada bidang data dan bisnis, 
+                      serta pemanfaatan teknologi dalam mendukung pengambilan keputusan.
+                    </p>
+
+                    <p>
+                        Website ini dibuat sebagai personal web untuk
+                        memperkenalkan profil dan informasi singkat
+                        mengenai saya.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Data mahasiswa -->
+ <table>
+    <tr>
+        <th>Data</th>
+        <th>Keterangan</th>
+    </tr>
+
+    <tr>
+        <td>Nama</td>
+        <td>Illona Indriani Fellysa</td>
+    </tr>
+
+    <tr>
+        <td>NIM</td>
+        <td>102042500002</td>
+    </tr>
+
+    <tr>
+        <td>Fakultas</td>
+        <td>Fakultas Rekayasa Industri</td>
+    </tr>
+
+    <tr>
+        <td>Program Studi</td>
+        <td>Sistem Informasi</td>
+    </tr>
+</table>
+
+        </section>
+
+
+
+        <!-- ================= DATE & TIME ================= -->
+        <section class="datetime-card">
+
+            <div>
+
+                <p class="eyebrow">
+                    CURRENT DATE &amp; TIME
+                </p>
+
+                <h2 id="date">
+                    Loading...
+                </h2>
+
+            </div>
+
+
+            <div
+                class="clock"
+                id="clock">
+
+                00:00:00
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer>
+
+            <p>
+                © 2026 Illona Fellysaa — Personal Portfolio
+            </p>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        function updateDateTime() {
+
+            const now = new Date();
+
+
+            /* Tanggal */
+
+            const dateOptions = {
+
+                weekday: "long",
+
+                day: "numeric",
+
+                month: "long",
+
+                year: "numeric"
+
+            };
+
+
+            document.getElementById("date").textContent =
+                now.toLocaleDateString(
+                    "id-ID",
+                    dateOptions
+                );
+
+
+            /* Jam */
+
+            document.getElementById("clock").textContent =
+                now.toLocaleTimeString(
+                    "id-ID",
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit"
+                    }
+                );
+
+        }
+
+
+        /* Jalankan pertama kali */
+
+        updateDateTime();
+
+
+        /* Update setiap 1 detik */
+
+        setInterval(
+            updateDateTime,
+            1000
+        );
+
+    </script>
+
+</body>
+
+</html>
+
